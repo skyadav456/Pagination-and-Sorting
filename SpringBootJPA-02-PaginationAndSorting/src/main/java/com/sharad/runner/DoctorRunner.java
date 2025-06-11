@@ -14,12 +14,19 @@ public class DoctorRunner implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		
+		/*	try {
+				doctorService.showDoctorBySorting(true, "docName","specialization").forEach(System.out::println);;
+			}catch(Exception e){
+				e.printStackTrace();
+			}*/
+		
 		try {
-			doctorService.showDoctorBySorting(true, "docName","specialization").forEach(System.out::println);;
+			doctorService.showDoctorinfoByPageNo(1, 5).forEach(System.out::println);;
 		}catch(Exception e){
 			e.printStackTrace();
 		}
-		}
+		
+	}
 	}
 
 
